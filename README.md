@@ -49,6 +49,13 @@ if( $categories ) {
 } 
 ```
 ```markdown
+if ( has_post_format( 'link' ) ) {
+  the_content();
+} else {
+  the_excerpt();
+}
+```
+```markdown
 Syntax highlighted code block
 
 # Header 1
