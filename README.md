@@ -28,7 +28,7 @@ function category_id_class( $classes ) {
   global $post;
   
   foreach( get_the_category( $post->ID ) as $category ) {
-  $classes[] = 'id' . $category->term_id;
+    $classes[] = 'id' . $category->term_id;
   }
   
   return $classes;
