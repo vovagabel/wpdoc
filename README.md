@@ -10,16 +10,16 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```markdown
 <?php
-if ( function_exists('has_nav_menu') && has_nav_menu('main-menu') ) {
-	wp_nav_menu( array(
-		'depth' => 6,
-		'sort_column' => 'menu_order',
-		'container' => 'ul',
-		'menu_class' => 'nav',
-		'menu_id' => false,
-		'theme_location' => 'main-menu'
-	) );
-} else {
+  if ( function_exists('has_nav_menu') && has_nav_menu('main-menu') ) {
+    wp_nav_menu( array(
+      'depth' => 6,
+      'sort_column' => 'menu_order',
+      'container' => 'ul',
+      'menu_class' => 'nav',
+      'menu_id' => false,
+      'theme_location' => 'main-menu'
+    ) );
+  } else {
 ?>
 ```
 ```markdown
