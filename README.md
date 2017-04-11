@@ -38,16 +38,15 @@ add_filter('post_class', 'category_id_class');
 add_filter('body_class', 'category_id_class');
 ```
 ```markdown
-<?php 
-  $categories = get_the_category();
+$categories = get_the_category();
+
+if( $categories ) {
+  foreach( $categories as $category ) {
+    $out . = 'categoryid-'. $category->term_id . '';
+  }
   
-	if( $categories ) {
-		foreach( $categories as $category ) {
-			$out . = 'categoryid-'. $category->term_id . '';
-		}
-		echo trim( $out, ', ' );
-	} 
-?>
+  echo trim( $out, ', ' );
+} 
 ```
 ```markdown
 Syntax highlighted code block
