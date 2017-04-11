@@ -23,6 +23,20 @@ if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'main-menu' ) ) {
 }
 ```
 ```markdown
+function category_id_class($classes) {
+  global $post;
+  
+  foreach( get_the_category( $post->ID ) as $category ) {
+    $classes[] = 'id' . $category->term_id;
+  }
+  
+	return $classes;
+}
+
+add_filter('post_class', 'category_id_class');
+add_filter('body_class', 'category_id_class');
+```
+```markdown
 Syntax highlighted code block
 
 # Header 1
