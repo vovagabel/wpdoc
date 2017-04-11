@@ -22,6 +22,7 @@ if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'main-menu' ) ) {
 
 }
 ```
+Добавление id категории поста в body_class
 ```markdown
 function category_id_class( $classes ) {
   global $post;
