@@ -9,7 +9,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-if ( function_exists('has_nav_menu') && has_nav_menu('main-menu') ) {
+if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'main-menu' ) ) {
   wp_nav_menu( array(
     'depth' => 6,
     'sort_column' => 'menu_order',
