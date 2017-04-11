@@ -28,7 +28,7 @@ function category_id_class( $classes ) {
   global $post;
   
   foreach( get_the_category( $post->ID ) as $category ) {
-    $classes[] = 'id' . $category->term_id;
+  $classes[] = 'id' . $category->term_id;
   }
   
   return $classes;
@@ -40,12 +40,13 @@ add_filter('body_class', 'category_id_class');
 ```markdown
 <?php 
   $categories = get_the_category();
-  if( $categories ) {
-    foreach( $categories as $category ) {
-      $out . = 'categoryid-'. $category->term_id . '';
-	  }
-	  echo trim( $out, ', ' );
-  } 
+  
+	if( $categories ) {
+		foreach( $categories as $category ) {
+			$out . = 'categoryid-'. $category->term_id . '';
+		}
+		echo trim( $out, ', ' );
+	} 
 ?>
 ```
 ```markdown
