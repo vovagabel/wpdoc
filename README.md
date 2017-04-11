@@ -12,7 +12,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 if ( function_exists('has_nav_menu') && has_nav_menu('main-menu') ) {
   wp_nav_menu( array(
     'depth' => 6,
-    'sort_column' => 'menu_order',
+    'sort_column' => 'menu_order', // формирование правильной ссылки
     'container' => 'ul',
     'menu_class' => 'nav',
     'menu_id' => false,
